@@ -1,8 +1,8 @@
 # PWA-chat
 
 Složka client obsahuje celého klienta.
-\n Vše ostatní patří k serveru
-\n
+<br/> Vše ostatní patří k serveru
+<br/>
 # Apiary
 pwachathajekapiary.docs.apiary.io
 
