@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+ï»¿import React, { Component } from 'react'
 import ReactTable from 'react-table'
 import api from '../api'
 
@@ -42,7 +42,7 @@ export default class Login extends Component {
             })
             .catch(err => {
                 console.error(err);
-                alert('Špatné jméno nebo heslo');
+                alert('Å patnÃ© jmÃ©no nebo heslo');
             });
     }
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+ï»¿import React, { Component } from 'react'
 import api from '../api'
 
 import styled from 'styled-components'
@@ -79,7 +79,7 @@ class UsersInsert extends Component {
                     if (res.status === 201)
                         window.alert(res.data.message)
                     else {
-                        window.alert(`Uživatel ${mail} byl pøidán`)
+                        window.alert(`UÅ¾ivatel ${mail} byl pÅ™idÃ¡n`)
                         window.location.href = `/list`
                         this.setState({
                             mail: '',
@@ -90,10 +90,10 @@ class UsersInsert extends Component {
                 })
             }
             else
-                window.alert("Hesla se neshodují")
+                window.alert("Hesla se neshodujÃ­")
         }
         else {
-            window.alert("Heslo musí mít alespoò 4 znaky");
+            window.alert("Heslo musÃ­ mÃ­t alespoÅˆ 4 znaky");
         }  
     }
 
@@ -101,7 +101,7 @@ class UsersInsert extends Component {
         const { mail, name, password, password_again } = this.state
         return (
             <Wrapper>
-                <Title>Pøidat uživatele</Title>
+                <Title>PÅ™idat uÅ¾ivatele</Title>
 
                 <Label>E-mail: </Label>
                 <InputText
@@ -110,7 +110,7 @@ class UsersInsert extends Component {
                     onChange={this.handleChangeInputMail}
                 />
 
-                <Label>Jméno: </Label>
+                <Label>JmÃ©no: </Label>
                 <InputText
                     type="text"
                     value={name}
@@ -135,7 +135,7 @@ class UsersInsert extends Component {
                     onChange={this.handleChangeInputPasswordAgain}
                 />
 
-                <Button onClick={this.handleIncludeUser}>Pøidat uživatele</Button>
+                <Button onClick={this.handleIncludeUser}>PÅ™idat uÅ¾ivatele</Button>
                 <CancelButton href={'/list'}>Cancel</CancelButton>
             </Wrapper>
         )

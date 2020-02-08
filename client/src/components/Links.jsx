@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+Ôªøimport React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Cookies from 'universal-cookie'
@@ -27,19 +27,19 @@ function LoggedIn() {
 function UserLogged() {
     return <React.Fragment><Item>
             <Link to="/list" className="nav-link">
-            NajÌt uûivatele </Link>
+            Naj√≠t u≈æivatele </Link>
         </Item>       
         <Item>
-            <Link className="nav-link" to=""><span onClick={triggerRoom}>Odhl·sit</span></Link>
+            <Link className="nav-link" to=""><span onClick={triggerRoom}>Odhl√°sit</span></Link>
         </Item>
         </React.Fragment>
 }
 
 function UserNotLogged() {
-    return <React.Fragment><Item><Link to="/login" className="nav-link"><span onClick={triggerRoomLog}>P¯ihl·sit</span></Link></Item>
+    return <React.Fragment><Item><Link to="/login" className="nav-link"><span onClick={triggerRoomLog}>P≈ôihl√°sit</span></Link></Item>
         <Item>
             <Link to="/create" className="nav-link">
-                Vytvo¯it uûivatele</Link>
+                Vytvo≈ôit u≈æivatele</Link>
         </Item>
     </React.Fragment>
 }

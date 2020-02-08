@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+ï»¿import React, { Component } from 'react'
 import ReactTable from 'react-table'
 import api from '../api'
 import Cookies from 'universal-cookie'
@@ -62,7 +62,7 @@ class DeleteRoom extends Component {
 
         if (
             window.confirm(
-                `Opravdu chcete odstranit tohoto uživatele: ${this.props.id} z pøátel?`,
+                `Opravdu chcete odstranit tohoto uÅ¾ivatele: ${this.props.id} z pÅ™Ã¡tel?`,
             )
         ) {
             const mail2 = this.props.id
@@ -98,7 +98,7 @@ class NewMesssage extends Component {
             this.setState({
                 text: '',
             })
-            ws.send(message + " " + mail2 + " " + mail1);            
+            ws.send(message + "Â " + mail2 + "Â " + mail1);            
         })
         
     }
@@ -109,7 +109,7 @@ class NewMesssage extends Component {
             <input
                 type='text'
                 className='write_msg'
-                placeholder='Napiš zprávu'
+                placeholder='NapiÅ¡ zprÃ¡vu'
                 ref='myTextarea'
                 value={this.state.text}
                 onChange={(event) => {
@@ -312,7 +312,7 @@ class AllMessages extends Component {
 
             ws.onmessage = evt => {
                 // on receiving a message, add it to the list of messages
-                const str = (evt.data).split(' ')
+                const str = (evt.data).split('Â ')
                 global.msg = ''
                 if (str[1] == global.mailId) {
                     const author = str[1]

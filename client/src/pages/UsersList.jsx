@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+ï»¿import React, { Component } from 'react'
 import ReactTable from 'react-table'
 import api from '../api'
 
@@ -30,7 +30,7 @@ class DeleteUser extends Component {
 
         if (
             window.confirm(
-                `Opravdu chcete odstranit tohoto uživatele ${this.props.id}?`,
+                `Opravdu chcete odstranit tohoto uÅ¾ivatele ${this.props.id}?`,
             )
         ) {
             api.deleteUserById(this.props.id)
@@ -58,7 +58,7 @@ class AddUser extends Component {
     addUser = event => {
         event.preventDefault()
 
-        if (window.confirm(`Opravdu chcete pøidat tohoto uživatele ${this.props.id}?`))
+        if (window.confirm(`Opravdu chcete pÅ™idat tohoto uÅ¾ivatele ${this.props.id}?`))
         {
             const mail2 = this.props.id
             const payload = { mail1, mail2 }
@@ -68,7 +68,7 @@ class AddUser extends Component {
     }
     
     render() {
-        return <Add onClick={this.addUser}>Pøidat</Add>
+        return <Add onClick={this.addUser}>PÅ™idat</Add>
     }
 }
 
@@ -100,17 +100,17 @@ class UsersList extends Component {
 
         const columns = [
             {
-                Header: 'Name',
+                Header: 'JmÃ©no',
                 accessor: 'name',
                 filterable: true,
             },
             {
-                Header: 'Email',
+                Header: 'E-mail',
                 accessor: 'mail',
                 filterable: true,
             },
             {
-                Header: 'Pøidat',
+                Header: 'PÅ™idat',
                 accessor: '',
                 Cell: function (props) {
                     return (

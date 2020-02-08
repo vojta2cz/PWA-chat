@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+﻿import React, { Component } from 'react'
 import ReactTable from 'react-table'
 import api from '../api'
 
@@ -42,20 +42,20 @@ class UserFind extends Component {
                 filterable: true,
             },
             {
-                Header: 'Name',
+                Header: 'Jméno',
                 accessor: 'name',
                 filterable: true,
             },
             {
-                Header: 'Email',
+                Header: 'E-mail',
                 accessor: 'email',
                 filterable: true,
             },
-            {
+            /*{
                 Header: 'Status',
                 accessor: 'status',
                 //Cell: props => <span>{props.value}</span>,
-            },
+            },*/
         ]
 
         let showTable = true
