@@ -12,7 +12,7 @@ const WebSocket = require('ws');
 
 
 const app = express()
-const apiPort = 14761 || process.env.PORT
+const apiPort = process.env.PORT || 14761 
 /*
 db.once('open', () => console.log(db.collection('user').name + '::xx'))
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
