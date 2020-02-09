@@ -12,7 +12,7 @@ const WebSocket = require('ws');
 
 
 const app = express()
-const apiPort = 8000
+const apiPort = process.env.PORT || 1337
 /*
 db.once('open', () => console.log(db.collection('user').name + '::xx'))
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -44,9 +44,11 @@ wss.on('connection', function connection(ws, req) {
     });
 });
 
+/*
 app.get('/', (req, res) => {
-    res.send('BackEnd pro Chat')
+    res.send('Ahoj svìte!')
 })
+*/
 /*
 app.get('/user/:mail', db.getUserById)
 app.get('/list', db.getUsers)
@@ -59,15 +61,8 @@ app.use('/api', userRouter)
 app.use('/api', roomRouter)
 app.use('/api', messageRouter)
 
-/*
-const path = require('path')// Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, 'client/src/app/index.js')))// Anything that doesn't match the above, send back index.html
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/src/app/index.js'))
-})
-*/
 app.get('/checkToken', withAuth, function (req, res) {
     res.sendStatus(200)
 })
-// || apiPort
-app.listen(process.env.PORT, () => console.log(`Server running on port ${apiPort}`))
+
+app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

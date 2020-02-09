@@ -4,8 +4,9 @@
     "\\client",
     "\\client\\src",
     "\\client\\src\\api",
+    "\\client\\src\\app",
     "\\client\\src\\pages"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\server.js",
   "PreviewInSolutionExplorer": false
 }

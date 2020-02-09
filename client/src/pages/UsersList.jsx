@@ -100,12 +100,12 @@ class UsersList extends Component {
 
         const columns = [
             {
-                Header: 'Jméno',
+                Header: 'Name',
                 accessor: 'name',
                 filterable: true,
             },
             {
-                Header: 'E-mail',
+                Header: 'Email',
                 accessor: 'mail',
                 filterable: true,
             },

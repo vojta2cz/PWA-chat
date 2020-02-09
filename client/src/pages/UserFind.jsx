@@ -42,20 +42,20 @@ class UserFind extends Component {
                 filterable: true,
             },
             {
-                Header: 'Jméno',
+                Header: 'Name',
                 accessor: 'name',
                 filterable: true,
             },
             {
-                Header: 'E-mail',
+                Header: 'Email',
                 accessor: 'email',
                 filterable: true,
             },
-            /*{
+            {
                 Header: 'Status',
                 accessor: 'status',
                 //Cell: props => <span>{props.value}</span>,
-            },*/
+            },
         ]
 
         let showTable = true
