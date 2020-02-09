@@ -33,7 +33,7 @@ const loginUser = (request, response) => {
                 return response.status(201).json({ success: false, message: `Špatné jméno nebo heslo` })
         }
         else
-            return response.status(201).json({ success: false, message: `Špatné jméno nebo heslo` })
+            return response.status(201).json({ success: false, message: `Vyskytla se chyba, opakujte akci` })
         if (error) {
             throw error
         }   
