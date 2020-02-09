@@ -1,7 +1,7 @@
 ﻿import axios from 'axios'
 const apiPort = process.env.PORT || 5000
 const api = axios.create({
-    baseURL: "http://localhost:"+apiPort+"/api",
+    baseURL: "https://protected-castle-86709.herokuapp.com:"+apiPort+"/api",
 })
 
 export const insertUser = payload => api.post(`/user`, payload)
