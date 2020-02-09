@@ -1,13 +1,12 @@
-//const Pool = require('pg').Pool
-
-//Pool.Promise = global.Promise;
-
 let pg = require('pg');
 if (process.env.DATABASE_URL) {
     pg.defaults.ssl = true;
 }
-let connString = process.env.DATABASE_URL;
+
+let connString = process.env.DATABASE_URL || 'postgresql://postgres:123@localhost:5432/chat';
+
 const Pool = require('pg').Pool;
+Pool.Promise = global.Promise;
 
 const pool = new Pool({
     connectionString: connString
