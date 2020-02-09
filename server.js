@@ -44,11 +44,9 @@ wss.on('connection', function connection(ws, req) {
     });
 });
 
-/*
 app.get('/', (req, res) => {
-    res.send('Ahoj svìte!')
+    res.send('BackEnd pro Chat')
 })
-*/
 /*
 app.get('/user/:mail', db.getUserById)
 app.get('/list', db.getUsers)
@@ -71,5 +69,5 @@ app.get('*', (req, res) => {
 app.get('/checkToken', withAuth, function (req, res) {
     res.sendStatus(200)
 })
-
-app.listen(process.env.PORT || apiPort, () => console.log(`Server running on port ${apiPort}`))
+// || apiPort
+app.listen(process.env.PORT, () => console.log(`Server running on port ${apiPort}`))
