@@ -7,7 +7,7 @@ if (process.env.DATABASE_URL) {
     pg.defaults.ssl = true;
 }
 let connString = process.env.DATABASE_URL;
-const { Pool } = require('pg');
+const Pool = require('pg').Pool;
 
 const pool = new Pool({
     connectionString: connString
