@@ -49,11 +49,11 @@ export default class Login extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
-                <h1>Login Below!</h1>
+                <h1>Přihlášení</h1>
                 <input
                     type="text"
                     name="mail"
-                    placeholder="Enter email"
+                    placeholder="Vložte email"
                     value={this.state.mail}
                     onChange={this.handleInputChange}
                     required
@@ -61,12 +61,12 @@ export default class Login extends Component {
                 <input
                     type="password"
                     name="password"
-                    placeholder="Enter password"
+                    placeholder="Vložte heslo"
                     value={this.state.password}
                     onChange={this.handleInputChange}
                     required
                 />
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Přihlásit" />
             </form>
         );
     }
