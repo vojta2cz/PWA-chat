@@ -9,10 +9,11 @@ const messageRouter = require('./routes/message-router')
 //const db = require('../PWA-chat/controllers/user-ctrl')
 const utf8 = require('utf8')
 const WebSocket = require('ws');
+const path = require('path');
 
 
 const app = express()
-const apiPort = process.env.PORT || 14761 
+const apiPort = process.env.PORT || 5000 
 /*
 db.once('open', () => console.log(db.collection('user').name + '::xx'))
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -56,6 +57,14 @@ app.get('/userName/:name', db.getUserByName)
 app.post('/user', db.InsertUser)
 app.delete('/user/:id', db.DeleteUser)
 */
+
+if (process.env.NODE_ENV === 'production') {
+    // Serve any static files
+    app.use(express.static(path.join(__dirname, 'client/build')));// Handle React routing, return all requests to React app
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    });
+}
 
 app.use('/api', userRouter)
 app.use('/api', roomRouter)
