@@ -1,7 +1,18 @@
-const Pool = require('pg').Pool
+//const Pool = require('pg').Pool
 
 //Pool.Promise = global.Promise;
 
+let pg = require('pg');
+if (process.env.DATABASE_URL) {
+    pg.defaults.ssl = true;
+}
+let connString = process.env.DATABASE_URL;
+const { Pool } = require('pg');
+
+const pool = new Pool({
+    connectionString: connString
+});
+/*
 const pool = new Pool({
     user: 'zcxqmrzczvpmaq',
     host: 'ec2-52-203-160-194.compute-1.amazonaws.com',
@@ -10,7 +21,7 @@ const pool = new Pool({
     port: 5432,
     ssl: true,
 })
-
+*/
 
 //const db = pool.connection
 
