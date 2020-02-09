@@ -1,7 +1,7 @@
 ﻿import axios from 'axios'
-const apiPort = process.env.PORT
+const apiPort = 14761 || process.env.PORT
 const api = axios.create({
-    baseURL: "http://localhost:1337/api",
+    baseURL: "http://localhost:"+apiPort+"/api",
 })
 
 export const insertUser = payload => api.post(`/user`, payload)
