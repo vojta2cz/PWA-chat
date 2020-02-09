@@ -1,15 +1,16 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-var cors = require('cors')
+const express = require('express');
+const bodyParser = require('body-parser');
+var cors = require('cors');
+const path = require('path');
 var cookieParser = require('cookie-parser');
 const withAuth = require('./middleware');
-const userRouter = require('./routes/user-router')
-const roomRouter = require('./routes/room-router')
-const messageRouter = require('./routes/message-router')
+const userRouter = require('./routes/user-router');
+const roomRouter = require('./routes/room-router');
+const messageRouter = require('./routes/message-router');
 //const db = require('../PWA-chat/controllers/user-ctrl')
-const utf8 = require('utf8')
+const utf8 = require('utf8');
 const WebSocket = require('ws');
-const path = require('path');
+
 
 
 const app = express()
